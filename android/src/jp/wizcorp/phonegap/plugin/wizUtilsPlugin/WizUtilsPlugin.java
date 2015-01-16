@@ -24,7 +24,7 @@ import java.io.File;
 public class WizUtilsPlugin extends CordovaPlugin {
 
     private Activity act;
-    private CordovaWebView _webView;
+    private org.apache.cordova.CordovaWebView _webView;
     private int sdk;
 
     @Override
