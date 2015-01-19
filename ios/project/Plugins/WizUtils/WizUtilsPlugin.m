@@ -17,7 +17,7 @@
 
 - (void)dealloc {
     self.theWebView = nil;
-    [super dealloc];
+    
 }
 
 -(CDVPlugin *)initWithWebView:(UIWebView *)theWebView {
