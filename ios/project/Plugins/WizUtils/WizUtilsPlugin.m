@@ -36,7 +36,15 @@
     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:_height];
     [self writeJavascript: [pluginResult toSuccessCallbackString:command.callbackId]];
 }
-
+- (void)getDeviceName:(CDVInvokedUrlCommand *)command {
+    WizLog(@"[WizUtilsPlugin] ******* getDeviceName ");
+    
+   UIDevice *deviceInfo = [UIDevice currentDevice];
+   NSLog(@“Device name:  %@”, deviceInfo.name);
+    
+    CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:deviceInfo.name];
+    [self writeJavascript: [pluginResult toSuccessCallbackString:command.callbackId]];
+}
 - (void)getDeviceWidth:(CDVInvokedUrlCommand *)command {
     WizLog(@"[WizUtilsPlugin] ******* getDeviceWidth ");
     
