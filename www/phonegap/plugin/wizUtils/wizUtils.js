@@ -31,6 +31,9 @@ var wizUtils = {
     getDeviceHeight: function(s) {
         cordova.exec(s, null, "WizUtilsPlugin", "getDeviceHeight", []);                      
     },
+    getDeviceName: function(s) {
+        cordova.exec(s, null, "WizUtilsPlugin", "getDeviceName", []);                      
+    },
 
     getDeviceWidth: function(s) {
         cordova.exec(s, null, "WizUtilsPlugin", "getDeviceWidth", []);                      
