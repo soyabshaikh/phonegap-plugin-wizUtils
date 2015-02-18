@@ -157,9 +157,11 @@ public class WizUtilsPlugin extends CordovaPlugin {
        String manufacturer = Build.MANUFACTURER;
        String model = Build.MODEL;
        if (model.startsWith(manufacturer)) {
-          return capitalize(model);
+           callbackContext.success(model);
+          return true;
        } else {
-          return capitalize(manufacturer) + " " + model;
+            callbackContext.success(capitalize(manufacturer) + " " + model);
+          return true;
        }
     }
         return false;
